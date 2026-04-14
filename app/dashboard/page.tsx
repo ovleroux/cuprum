@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/app/ui/dashboard/app-sidebar"
+import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,7 +6,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/app/ui/breadcrumb"
+} from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import {
   SidebarInset,
@@ -52,11 +52,4 @@ export default function Page() {
       </SidebarInset>
     </SidebarProvider>
   )
-}
-
-
-
-
-export default function Page() {
-  return <p>Dashboard Page</p>;
 }
