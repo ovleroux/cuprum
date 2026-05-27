@@ -49,7 +49,7 @@ export function NavProjects({
               </a>
             </SidebarMenuButton>
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+              <DropdownMenuTrigger>
                 <SidebarMenuAction showOnHover>
                   <MoreHorizontal />
                   <span className="sr-only">More</span>
