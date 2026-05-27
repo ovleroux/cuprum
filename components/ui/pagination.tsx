@@ -45,20 +45,18 @@ function PaginationLink({
   ...props
 }: PaginationLinkProps) {
   return (
-    <Button
-      variant={isActive ? "outline" : "ghost"}
-      size={size}
-      className={cn(className)}
-      nativeButton={false}
-      render={
-        <a
-          aria-current={isActive ? "page" : undefined}
-          data-slot="pagination-link"
-          data-active={isActive}
-          {...props}
-        />
-      }
+  <Button
+    variant={isActive ? "outline" : "ghost"}
+    size={size}
+    className={cn(className)}
+  >
+    <a
+      aria-current={isActive ? "page" : undefined}
+      data-slot="pagination-link"
+      data-active={isActive}
+      {...props}
     />
+  </Button>
   )
 }
 

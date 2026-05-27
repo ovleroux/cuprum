@@ -36,23 +36,25 @@ export function NavUser({
     <SidebarMenu>
       <SidebarMenuItem>
         <DropdownMenu>
-          <DropdownMenuTrigger
-            render={
-              <SidebarMenuButton size="lg" className="aria-expanded:bg-muted" />
-            }
-          >
-            <Avatar className="size-8 rounded-lg grayscale">
-              <AvatarImage src={user.avatar} alt={user.name} />
-              <AvatarFallback className="rounded-lg">CN</AvatarFallback>
-            </Avatar>
-            <div className="grid flex-1 text-left text-sm leading-tight">
-              <span className="truncate font-medium">{user.name}</span>
-              <span className="truncate text-xs text-foreground/70">
-                {user.email}
-              </span>
-            </div>
-            <EllipsisVerticalIcon className="ml-auto size-4" />
-          </DropdownMenuTrigger>
+          <DropdownMenuTrigger>
+          <SidebarMenuButton size="lg" className="data-[state=open]:bg-muted" asChild>
+            <button>
+              <Avatar className="size-8 rounded-lg grayscale">
+                <AvatarImage src={user.avatar} alt={user.name} />
+                <AvatarFallback className="rounded-lg">OL</AvatarFallback>
+              </Avatar>
+              
+              <div className="grid flex-1 text-left text-sm leading-tight">
+                <span className="truncate font-medium">{user.name}</span>
+                <span className="truncate text-xs text-foreground/70">
+                  {user.email}
+                </span>
+              </div>
+              
+              <EllipsisVerticalIcon className="ml-auto size-4" />
+            </button>
+          </SidebarMenuButton>
+        </DropdownMenuTrigger>
           <DropdownMenuContent
             className="min-w-56"
             side={isMobile ? "bottom" : "right"}
@@ -64,7 +66,7 @@ export function NavUser({
                 <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                   <Avatar className="size-8">
                     <AvatarImage src={user.avatar} alt={user.name} />
-                    <AvatarFallback className="rounded-lg">CN</AvatarFallback>
+                    <AvatarFallback className="rounded-lg">OL</AvatarFallback>
                   </Avatar>
                   <div className="grid flex-1 text-left text-sm leading-tight">
                     <span className="truncate font-medium">{user.name}</span>

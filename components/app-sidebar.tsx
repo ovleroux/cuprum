@@ -20,8 +20,8 @@ import { IconInnerShadowTop } from "@tabler/icons-react"
 
 const data = {
   user: {
-    name: "Lorraine Sagathevan",
-    email: "lorraine.sagathevan@sandvik.com",
+    name: "Ofentse le Roux",
+    email: "ofentse.le_roux@sandvik.com",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
@@ -93,11 +93,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
-              className="data-[slot=sidebar-menu-button]:p-1.5!"
-              render={<a href="#" />}
+              className="data-[slot=sidebar-menu-button]:p-1.5!" asChild
             >
-              <IconInnerShadowTop className="size-5!" />
-              <span className="text-base font-semibold">Horizon</span>
+              <a href="#">
+                <IconInnerShadowTop className="size-5!" />
+                <span className="text-base font-semibold">Horizon</span>
+              </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

@@ -34,22 +34,20 @@ export function NavDocuments({
       <SidebarMenu>
         {items.map((item) => (
           <SidebarMenuItem key={item.name}>
-            <SidebarMenuButton render={<a href={item.url} />}>
-              {item.icon}
-              <span>{item.name}</span>
+            <SidebarMenuButton asChild>
+              <a href={item.url}>
+                {item.icon}
+                <span>{item.name}</span>
+              </a>
             </SidebarMenuButton>
             <DropdownMenu>
-              <DropdownMenuTrigger
-                render={
-                  <SidebarMenuAction
-                    showOnHover
-                    className="aria-expanded:bg-muted"
-                  />
-                }
-              >
-                <MoreHorizontalIcon
-                />
-                <span className="sr-only">More</span>
+              <DropdownMenuTrigger>
+                <SidebarMenuAction showOnHover className="data-[state=open]:bg-muted">
+                  <button>
+                    <MoreHorizontalIcon />
+                    <span className="sr-only">More</span>
+                  </button>
+                </SidebarMenuAction>
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 className="w-24"
