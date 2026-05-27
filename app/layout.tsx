@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Sandvik_Sans  from "next/font/local";
-import Sandvik_Sans_Headline from "next/font/local";
+// import Sandvik_Sans_Headline from "next/font/local";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Variable } from "lucide-react";
+// import { Variable } from "lucide-react";
 
 const sandvikText = Sandvik_Sans({
   src: [
